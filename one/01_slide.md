@@ -64,10 +64,32 @@
 !SLIDE
 # Gem #1 Currency
 
-!SLIDE
-## Everything has a currency
+!SLIDE bullets
+## Everything has a currency ##
 * Loans
 * Repayments
 * Bank Statements
+
+!SLIDE bullets incremental
+## How do we store them? ##
+* Float?
+* Decimal?
+* Integer?
+
+!SLIDE bullets incremental
+# Integer #
+## We store ##
+* "23 USD" => 2300
+* "23 MOP" => 230
+* "23 KRW" => 23
+* [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
+
+!SLIDE bullets incremental
+# The Gem should #
+* display an integer as a currency
+* handle simple arithmetic
+
+ 
+
 
    
