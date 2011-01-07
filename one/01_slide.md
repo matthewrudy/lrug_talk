@@ -20,6 +20,12 @@
 ## Lack of documentation and community
 
 !SLIDE bullets incremental
+# The Application
+* Client comes to us for a loan
+* 6 months of bank and credit card statements
+* Regression and trend analysis
+
+!SLIDE bullets incremental
 # 1. Database
 * I had only ever used MySQL
 * They wanted SQLserver
@@ -39,6 +45,29 @@
 !SLIDE bullets incremental
 # I didn't plan to give them that
 
-!SLIDE
+!SLIDE bullets incremental
 # The Answer
 * Postgres
+
+!SLIDE bullets incremental
+# Cool stuff
+* CHECK constraints
+* ALTER TABLE loans ADD CONSTRAINT usuary_check CHECK (interest_rate < 60);
+* Partial Indexes
+* CREATE UNIQUE INDEX one_loan_per_client ON loans (client_id) WHERE status='disbursed';
+
+!SLIDE bullets incremental
+* Encryption
+* (or at least the documentation says you can do it)
+* http://www.wikivs.com/wiki/MySQL_vs_PostgreSQL
+
+!SLIDE
+# Gem #1 Currency
+
+!SLIDE
+## Everything has a currency
+* Loans
+* Repayments
+* Bank Statements
+
+   
