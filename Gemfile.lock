@@ -21,7 +21,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bluecloth
-  gli
-  nokogiri
   showoff
