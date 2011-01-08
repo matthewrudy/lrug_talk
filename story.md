@@ -101,10 +101,10 @@ Loan
 - has many :fees
 - has many :repayments
 
-  @@@ ruby
-  def loan.outstanding_principal
-    self.principal_amount - self.repayments.sum(:principal_amount)
-  end
+    @@@ ruby
+    def loan.outstanding_principal
+      self.principal_amount - self.repayments.sum(:principal_amount)
+    end
 
 # This escalated!
 * different ways to pay
@@ -113,4 +113,27 @@ Loan
 * Transfers
 
 # A new model
+    @@@ ruby
+    class Loan
+      has_many :loan_ledgers
+      delegate :total_principal, :outstanding_principal, :collected_principal, :to => :loan_ledgers
+      ...
+    end
+
+# A loan is just a balance of ledgers
+* Amount Disbursed - 100,000 HKD
+* Initial Interest -  15,000 HKD
+* Repayment 1      -  -1,000 HKD
+* Late repayment fee -   100 HKD
+
+# LoanLedger
+    @@@ ruby
+    class LoanLedger
+      property :code, String
+      property :principal_amount, BigInt
+      property :interest_amount,  BigInt
+      property :fee_amount,       BigInt
+      property :rounding,         Decimal
+    end
+
 
