@@ -82,3 +82,35 @@
 * Ubuntu 10.04 LTS
 * Familiarity vs Optimisation
 
+# Architecture
+## How do we model a loan?
+
+# First attempt
+Loan
+- principal amount
+- interest amount
+- principal collected
+- interest collected
+
+# Add more
+- fees added
+- fees collected
+
+# Or maybe
+Loan
+- has many :fees
+- has many :repayments
+
+  @@@ ruby
+  def loan.outstanding_principal
+    self.principal_amount - self.repayments.sum(:principal_amount)
+  end
+
+# This escalated!
+* different ways to pay
+* Reversals
+* Partial repayments
+* Transfers
+
+# A new model
+
