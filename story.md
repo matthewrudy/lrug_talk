@@ -1,4 +1,10 @@
 # Building a Financial App in Rails #
+## and all the gems I made along the way ##
+
+# Who am I?
+* [Matthew Rudy Jacobs](http://matthewrudy.com)
+* @[MatthewRudy](http://twitter.com/matthewrudy)
+* [Thought-Sauce.com](http://thought-sauce.com)
 
 # The Story
 * I was working in Cambridge
