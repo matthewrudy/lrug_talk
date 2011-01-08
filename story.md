@@ -48,3 +48,37 @@
 * Daily Direct Debits
 * Handle Reversed Payments
 * Ongoing Risk Analysis
+
+# Technology
+
+# Language
+* Groovy wasn't working
+* Ruby is comfortable
+* Rewrite took 5 days
+* Could switch to jRuby in the future
+
+# Framework
+* uh...
+* Rails
+* ... 3
+
+# Database
+* Expected to use SQLServer
+* A big mess of stored procedures?
+* A Windows deployment?
+
+# Postgres!
+* Feels enterprisey
+* Fully featured
+* Numerous encryption solutions
+
+# My favourite bits
+* CHECK constraints
+* ALTER TABLE loans ADD CONSTRAINT usuary_check CHECK (interest_rate < 60);
+* Partial Indexes
+* CREATE UNIQUE INDEX one_loan_per_client ON loans (client_id) WHERE status='disbursed';
+
+# OS
+* Ubuntu 10.04 LTS
+* Familiarity vs Optimisation
+
