@@ -1,1 +1,6 @@
-{ "name": "Building a Financial App in Rails", "sections": [ {"section":"story"} ]}
+{ "name": "Building a Financial App in Rails", "sections": [
+  {"section":"intro"},
+  {"section":"app"},
+  {"section":"technology"},
+  {"section":"problems"}
+]}
