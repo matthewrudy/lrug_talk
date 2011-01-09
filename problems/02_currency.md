@@ -8,10 +8,6 @@
 * Integer?
 
 !SLIDE
-# Careful rounding
-* avoid compounding errors
-
-!SLIDE
 # Currency gem
     @@@ ruby
     class Loan

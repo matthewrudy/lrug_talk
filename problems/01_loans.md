@@ -64,16 +64,12 @@
 !SLIDE
 # Time to rethink
 
-!SLIDE
+!SLIDE bullets
 # A loan is just a balance of ledgers
-
-> Amount Disbursed: 100,000 HKD
-
-> Initial Interest:  15,000 HKD
-
-> Repayment:         -1,000 HKD
-
-> Late repayment fee:   100 HKD
+* Amount Disbursed: 100,000 HKD
+* Initial Interest:  15,000 HKD
+* Repayment:         -1,000 HKD
+* Late repayment fee:   100 HKD
 
 !SLIDE
 # LoanLedger
@@ -85,6 +81,24 @@
       property :fee_amount,       BigInt
       property :rounding,         Decimal
     end
+    
+!SLIDE
+# Careful rounding
+    @@@ ruby
+    1_day = 100_000 * 0.30 / 365
+    # 82.1917808219178
+
+    1_day.round!
+    # 82.20
+
+    100_days = 100_000 * 0.30 * 100 / 365
+    # 8219.17808219178
+
+    100_days.round!
+    # 8219.18
+
+    100 * 1_day
+    # 8220.00
 
 !SLIDE
 # LoanLedger
