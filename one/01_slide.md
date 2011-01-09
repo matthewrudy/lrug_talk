@@ -1,4 +1,4 @@
-!SLIDE 
+!SLIDE title-slide
 # Building a Financial App #
 # in Rails #
 ## and all the gems I made along the way ##
@@ -77,17 +77,46 @@
 * Integer?
 
 !SLIDE bullets incremental
-# Integer #
-## We store ##
+# The answer: #
+## Integer ##
+
+!SLIDE bullets incremental
+## We need to deal with ##
 * "23 USD" => 2300
 * "23 MOP" => 230
 * "23 KRW" => 23
+
+!SLIDE bullets incremental
+## we store ##
+* ISO currency code
+* integer value
 * [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
 
+!SLIDE bullets incremental
+# Benefits
+* No rounding errors
+* Deal with non-standard currencies
+
+!SLIDE commandline incremental
+# Rails Gives Us #
+    $ number_to_currency(12345.67)
+    $12,345.67
+
+!SLIDE commandline incremental
+# But I want #
+    $ currency_thingy(1234567, "HKD")
+    12,345.67 HKD
+
+!SLIDE commandline incremental
+# or #
+    $ currency_thingy(1234567, "KRW")
+    1,234,567 KRW
+  
 !SLIDE bullets incremental
 # The Gem should #
 * display an integer as a currency
 * handle simple arithmetic
+
 
  
 
