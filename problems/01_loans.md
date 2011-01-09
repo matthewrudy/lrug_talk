@@ -81,7 +81,31 @@
       property :fee_amount,       BigInt
       property :rounding,         Decimal
     end
-    
+
+!SLIDE
+# Sum over these
+    @@@ ruby
+    class LoanLedger
+
+      def self.total_principal
+        self.creative_codes.sum(:principal_amount)
+      end
+
+      def self.outstanding_principal
+        self.sum(:principal_amount)
+      end
+
+!SLIDE
+# And delegate
+    @@@ ruby
+    class Loan
+      has_many :ledgers
+
+      delegate :total_principal,
+        :collected_principal,
+        :outstanding_principal,
+        :to => :ledgers
+
 !SLIDE
 # Careful rounding
     @@@ ruby
@@ -100,18 +124,5 @@
     100 * 1_day
     # 8220.00
 
-!SLIDE
-# LoanLedger
-    @@@ ruby
-    class LoanLedger
-    
-      def self.total_principal
-        self.creative_codes.sum(:principal_amount)
-      end
-      
-      def self.outstanding_principal
-        self.sum(:principal_amount)
-      end
-      
 !SLIDE
 # The accountants got it right

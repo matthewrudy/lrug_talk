@@ -18,13 +18,8 @@
 * Sector-wide comparison
 
 !SLIDE bullets incremental
-# 1. Risk Analysis
-## Objective
-* Define a "credit limit"
-
-!SLIDE bullets incremental
-# 2. Loan Management
-* From Request to Disbursement
+# Loan Management
+* Manage Approval
 * Daily Direct Debits
 * Handle Reversed Payments
 * Ongoing Risk Analysis
