@@ -24,11 +24,11 @@
         :domain => ["thought-sauce.com", "advanced-pay.com"]}
     end
     
-!SLIDE
+!SLIDE smaller
 # Raises an error
     @@@ ruby
     rescue_from WhitelistMailProxy::BlockedDelivery do |exception|
       flash[:error] = "Email Blocked"
       message = "<h1>WhitelistMailProxy::BlockedDelivery</h1>\n<p>#{ exception.message }></p>"
       render :inline => message, :layout => "application"
-   end
+    end
