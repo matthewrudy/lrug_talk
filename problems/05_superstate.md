@@ -37,7 +37,11 @@
 
 !SLIDE
 # SuperState::CommonStates
-   @@@ ruby
-   class MyClass < ActiveRecord::Base
-     include SuperState::CommonStates
-   end
+    @@@ ruby
+    class MyClass < ActiveRecord::Base
+      include SuperState::CommonStates
+    end
+    record.pending?
+    record.start_processing!
+    record.processing?
+    record.complete_processing!
